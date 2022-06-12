@@ -18,6 +18,7 @@ confirmBtn.addEventListener('click', (e) => {
         authorField.value = '';
         pageField.value = '';
         hasReadField.checked = false;
+        form.classList.remove('show');
     }
 })
 
