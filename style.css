@@ -111,6 +111,10 @@ input:not([type='checkbox']):focus {
     background: rgba(31, 31, 31, 0.8);
 }
 
+input[type='checkbox'] {
+    accent-color: green;
+}
+
 button {
     border-radius: 25px;
     border: none;
