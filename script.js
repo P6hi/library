@@ -43,7 +43,7 @@ function libraryLoop() {
     let indexNumber = 0;
     cardsContainer.textContent = '';
     myLibrary.forEach((book) => { 
-        
+
         const card = document.createElement('div');
         const titleHeader = document.createElement('h2');
         const authorPara = document.createElement('p');
@@ -62,6 +62,9 @@ function libraryLoop() {
         card.appendChild(removeBtn);
         cardsContainer.appendChild(card);
 
+        requestAnimationFrame(() => {
+        card.classList.add('appear');
+    });
         removeBtn.addEventListener('click', e => {
             myLibrary.splice(e.target.dataset.index, 1);
             libraryLoop();
