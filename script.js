@@ -43,8 +43,8 @@ function addBookToLibrary() {
         const authorPara = document.createElement('p');
         const pagePara = document.createElement('p');
         titleHeader.textContent = book.title;
-        authorPara.textContent = book.author;
-        pagePara.textContent = book.pages;
+        authorPara.textContent = 'Author: ' + book.author;
+        pagePara.textContent = 'Number of pages: ' + book.pages;
         card.appendChild(titleHeader);
         card.appendChild(authorPara);
         card.appendChild(pagePara);
