@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@200&display=swap');
+
+:root {
+    --accent-text: #e5e5e5;
+    --accent-one: #262626;
+    --accent-two: #a3a3a3;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    background: url('library.jpg');
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    border-bottom: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: var(--accent-text);
+}
+
+header > h1 {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.5rem;
+    transition: color 0.5s, transform 0.5s;
+}
+
+header > h1:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+form {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem 4rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+form > div {
+    margin: 1rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    color: var(--accent-text);
+}
+
+input:not([type='checkbox']) {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    background: rgba(17, 17, 17, 0.8);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    transition: background 0.2s;
+}
+
+input:not([type='checkbox']):focus {
+    background: rgba(31, 31, 31, 0.8);
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.8);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button:hover,
+button:active {
+    background: rgba(31, 31, 31, 0.8);
+    transform: scale(1.05);
+}
+
+body > div {
+    width: 20%;
+}
