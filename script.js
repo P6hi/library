@@ -14,6 +14,10 @@ confirmBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (titleField.value !== '' && authorField.value !== '' && pageField.value !== '') {
         addBookToLibrary();
+        titleField.value = '';
+        authorField.value = '';
+        pageField.value = '';
+        hasReadField.checked = false;
     }
 })
 
