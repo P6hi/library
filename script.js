@@ -36,18 +36,35 @@ function Book(title, author, pages, read) {
 function addBookToLibrary() {
     const newBook = new Book(titleField.value, authorField.value, pageField.value, hasReadField.checked);
     myLibrary.push(newBook);
+    libraryLoop();
+}
+
+function libraryLoop() {
+    let indexNumber = 0;
     cardsContainer.textContent = '';
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book) => { 
+        
         const card = document.createElement('div');
         const titleHeader = document.createElement('h2');
         const authorPara = document.createElement('p');
         const pagePara = document.createElement('p');
+        const removeBtn = document.createElement('button');
+        removeBtn.setAttribute('type', 'button');
+        removeBtn.setAttribute('data-index', indexNumber);
+        indexNumber += 1;
         titleHeader.textContent = book.title;
         authorPara.textContent = 'Author: ' + book.author;
         pagePara.textContent = 'Number of pages: ' + book.pages;
+        removeBtn.textContent = 'Remove';
         card.appendChild(titleHeader);
         card.appendChild(authorPara);
         card.appendChild(pagePara);
+        card.appendChild(removeBtn);
         cardsContainer.appendChild(card);
+
+        removeBtn.addEventListener('click', e => {
+            myLibrary.splice(e.target.dataset.index, 1);
+            libraryLoop();
+        })
     });
-};
+}
