@@ -65,7 +65,7 @@ form {
     position: absolute;
     z-index: 1;
     padding: 2rem 4rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 1);
     border-radius: 15px;
     transform: translateY(20px);
     opacity: 0;
