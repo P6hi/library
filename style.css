@@ -170,3 +170,15 @@ body > div {
     opacity: 1;
     pointer-events: auto;
 }
+
+@media only screen and (max-width: 700px) {
+
+    .cards-container {
+        justify-items: center;
+        align-items: center;
+    }
+
+    body > div {
+        width: 90%;
+    }
+}
