@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const formBtn = document.querySelector('#formBtn');
 const main = document.querySelector('main');
+const cardsContainer = document.querySelector('.cards-container');
 const confirmBtn = document.querySelector('button[type="submit"]');
 const titleField = document.querySelector('#title');
 const authorField = document.querySelector('#author');
@@ -35,6 +36,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary() {
     const newBook = new Book(titleField.value, authorField.value, pageField.value, hasReadField.checked);
     myLibrary.push(newBook);
+    cardsContainer.textContent = '';
     myLibrary.forEach((book) => {
         const card = document.createElement('div');
         const titleHeader = document.createElement('h2');
@@ -46,6 +48,6 @@ function addBookToLibrary() {
         card.appendChild(titleHeader);
         card.appendChild(authorPara);
         card.appendChild(pagePara);
-        main.appendChild(card);
+        cardsContainer.appendChild(card);
     });
 };
