@@ -62,7 +62,7 @@ form {
     padding: 2rem 4rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
-    transform: translateY(50px);
+    transform: translateY(20px);
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s;
