@@ -14,7 +14,7 @@ formBtn.addEventListener('click', () => {
 
 confirmBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (titleField.value !== '' && authorField.value !== '' && pageField.value !== '') {
+    if (titleField.checkValidity() && authorField.checkValidity() && pageField.checkValidity()) {
         addBookToLibrary();
         titleField.value = '';
         authorField.value = '';
