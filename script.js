@@ -48,6 +48,21 @@ function libraryLoop() {
         const titleHeader = document.createElement('h2');
         const authorPara = document.createElement('p');
         const pagePara = document.createElement('p');
+        const hasReadLabel = document.createElement('label');
+        const hasReadInput = document.createElement('input')
+        hasReadLabel.setAttribute('for', 'read')
+        hasReadLabel.textContent = 'Read: ';
+        hasReadInput.setAttribute('type', 'checkbox');
+        hasReadInput.setAttribute('id', 'read');
+        
+        if (book.read === true) {
+            hasReadInput.checked = true;
+        }
+
+        hasReadInput.addEventListener('input', e => {
+            book.read = e.target.checked;
+        });
+
         const removeBtn = document.createElement('button');
         removeBtn.setAttribute('type', 'button');
         removeBtn.setAttribute('data-index', indexNumber);
@@ -59,6 +74,8 @@ function libraryLoop() {
         card.appendChild(titleHeader);
         card.appendChild(authorPara);
         card.appendChild(pagePara);
+        card.appendChild(hasReadLabel);
+        card.appendChild(hasReadInput);
         card.appendChild(removeBtn);
         cardsContainer.appendChild(card);
 
